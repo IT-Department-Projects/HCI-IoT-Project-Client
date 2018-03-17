@@ -1,4 +1,4 @@
-# HCI-IoT-Project-Client
+# Attendance Management System Client
 
 ## About
 
@@ -12,7 +12,6 @@ This is a project implemented in Python where the RPi is interfaced with the RPi
 ## Environment Setup
 
 * It is preferable if you use Python Virtual Environment.
-
 * Create a new conda environment using the following command:
 ```
 virtualenv venv
