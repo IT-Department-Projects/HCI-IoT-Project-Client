@@ -1,15 +1,36 @@
 import requests
 from time import sleep
+import argparse
 
-url = 'http://10.100.120.48/image_recognition'
+parser = argparse.ArgumentParser()
+parser.add_argument("url", help="Give the URL of the server")
+parser.add_argument("--detection", help="Detect Faces in the image")
+parser.add_argument("--recognition", help="Recognize Faces in the image")
 
-while True:
-    # Code for capturing image
+args = parser.parse_args()
+print(args.url)
+url = args.url+':5000'
 
-    captured_image = open('data/salman.jpg', 'rb')
+if args.detection:
+    while True:
+        url = url + '/image_detection'
+        # Code for capturing image
+        captured_image = open('data/salman.jpg', 'rb')
 
-    files = {'image': captured_image}
-    r = requests.post(url, files=files)
-    print(r.text)
+        files = {'file': captured_image}
+        r = requests.post(url, files=files)
+        print(r.text)
 
-    sleep(5)
+        sleep(5)
+
+if args.recognition:
+    while True:
+        url = url+'image_recognition'
+        # Code for capturing image
+        captured_image = open('data/salman.jpg', 'rb')
+
+        files = {'file': captured_image}
+        r = requests.post(url, files=files)
+        print(r.text)
+
+        sleep(5)
