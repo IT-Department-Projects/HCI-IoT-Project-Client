@@ -25,7 +25,7 @@ if args.detection:
 
 if args.recognition:
     while True:
-        url = url+'image_recognition'
+        url = url+'/image_recognition'
         # Code for capturing image
         captured_image = open('data/salman.jpg', 'rb')
 
