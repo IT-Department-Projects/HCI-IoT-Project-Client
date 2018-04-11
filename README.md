@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 * Create a folder called `data` and add all images that are needed to send to it! This can be used as an initial test step to send images to the server without having to use the RPi camera.  
 
-* The basic usage is `python client.py <server url> --detection` or `python client.py <server url> --recognition`.
+* The basic usage is `python driver.py <server url> --detection 1` or `python client.py <server url> --recognition 1`.
 
 ## Contributors
 The Project is created and maintained by 
