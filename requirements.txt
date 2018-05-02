@@ -1,0 +1,4 @@
+requests==2.18.4
+numpy==1.12.1
+Pillow==5.1.0
+telepot==12.6
